@@ -5,7 +5,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 
 export const Skills = () => {
@@ -30,11 +29,11 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className="skill" id="skills" style={{ backgroundColor: "lightblue" }}>
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
+                    <div className="skill-bx wow zoomIn" style={{ backgroundColor: "blue", color: "white" }}>
                         <h2>OUR MISSION</h2>
                         <p>We help students excel by providing personalized,
                         engaging, and confidence-building tutoring.</p>
@@ -74,7 +73,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        {/* Background image removed and replaced with light blue background */}
     </section>
   )
 }

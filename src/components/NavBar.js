@@ -4,6 +4,7 @@ import logo from '../assets/img/Premier Logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon4 from '../assets/img/nav-icon4.svg'; // You'll need to add a Facebook icon SVG
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -47,7 +48,7 @@ export const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto" style={{ gap: "70px" }}> {/* More spacing between nav items */}
+            <Nav className="ms-auto" style={{ gap: "50px" }}> {/* Adjusted spacing for more items */}
               <Nav.Link 
                 href="#home" 
                 onClick={() => onUpdateActiveLink('home')}
@@ -67,6 +68,16 @@ export const NavBar = () => {
                 }}
               >
                 About
+              </Nav.Link>
+              <Nav.Link 
+                href="#services" 
+                onClick={() => onUpdateActiveLink('services')}
+                style={{
+                  color: activeLink === 'services' ? "purple" : "black", 
+                  fontWeight: activeLink === 'services' ? "bold" : "normal"
+                }}
+              >
+                Our Services
               </Nav.Link>
               <Nav.Link 
                 href="#projects" 
@@ -89,6 +100,9 @@ export const NavBar = () => {
                 </a>
                 <a href="https://www.instagram.com/premier_home_tuition/?hl=en" style={{ background: "#B2B2B2", borderRadius: "50%", padding: "10px", display: "flex", border: "2px solid black" }}>
                   <img src={navIcon3} alt="" style={{ filter: "brightness(0)", width: "24px" }} />
+                </a>
+                <a href="https://www.facebook.com/premierhometuition" style={{ background: "#B2B2B2", borderRadius: "50%", padding: "10px", display: "flex", border: "2px solid black" }}>
+                  <img src={navIcon4} alt="" style={{ filter: "brightness(0)", width: "24px" }} />
                 </a>
               </div>
               <HashLink to='#connect'>
