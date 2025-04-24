@@ -44,6 +44,7 @@ export const Projects = () => {
                     fontWeight: "bold",
                     cursor: "pointer" 
                   }}
+                  onClick={() => window.open("https://form.typeform.com/to/agLbkvvD", "_blank")}
                   onMouseOver={(e) => { e.target.style.background = "purple"; e.target.style.color = "white"; }}
                   onMouseOut={(e) => { e.target.style.background = "rgba(255, 255, 255, 0.8)"; e.target.style.color = "purple"; }}
                 >
