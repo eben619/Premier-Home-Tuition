@@ -1,22 +1,107 @@
 /* OurServices.css */
 .services-section {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Lower z-index for background */
+}
+
+.full-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Header styling */
+.services-header {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.services-header h2 {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+  min-width: 200px;
+}
+
+.services-content {
+  position: absolute; /* Position absolutely within the section */
+  bottom: 0;          /* Position at the bottom */
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 2; /* Higher z-index to appear above background */
+  display: flex;
+  flex-direction: row; /* For side-by-side layout */
+  justify-content: space-between; /* Space between the cards */
+  align-items: stretch; /* Makes cards the same height */
+}
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.85); /* White transparent background */
+  border-radius: 12px; /* Rounded borders */
+  padding: 1.5rem;
+  width: 45%; /* Adjust width to fit side by side with spacing */
+  max-width: 550px; /* Maximum width for larger screens */
+  color: #000; /* Black text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem; /* Space from bottom of the screen */
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.service-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .services-content {
+    flex-direction: column; /* Stack cards on mobile */
+    align-items: center;
   }
   
-  .background-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .service-card {
+    width: 90%; /* Full width on mobile */
+    margin-bottom: 1rem;
   }
   
-  .full-background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This makes the image cover the entire container */
-    object-position: center;
+  .services-header h2 {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
+}

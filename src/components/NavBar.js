@@ -42,7 +42,7 @@ export const NavBar = () => {
       >
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" style={{ height: "40px", width: "auto" }} />
+            <img src={logo} alt="Logo" style={{ height: "80px", width: "auto" }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
