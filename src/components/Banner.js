@@ -102,7 +102,7 @@ export const Banner = () => {
                   </div>
 
                   <button 
-                    onClick={() => console.log("connect")}
+                    onClick={() => window.open("https://form.typeform.com/to/kmd0Scuf", "_blank")}
                     style={{
                       background: "black",
                       color: "white",

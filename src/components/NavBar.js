@@ -106,7 +106,7 @@ export const NavBar = () => {
                 </a>
               </div>
               <HashLink to='#connect'>
-                <button 
+              <button 
                   style={{ 
                     background: "black", 
                     color: "purple", 
@@ -116,11 +116,13 @@ export const NavBar = () => {
                     fontWeight: "bold",
                     cursor: "pointer" 
                   }}
+                  onClick={() => window.open("https://form.typeform.com/to/kmd0Scuf", "_blank")}
                   onMouseOver={(e) => { e.target.style.background = "purple"; e.target.style.color = "white"; }}
                   onMouseOut={(e) => { e.target.style.background = "rgba(255, 255, 255, 0.8)"; e.target.style.color = "purple"; }}
                 >
                   Request A Tutor
-                </button>
+              </button>
+
               </HashLink>
             </span>
           </Navbar.Collapse>
