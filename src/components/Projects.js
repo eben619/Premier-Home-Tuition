@@ -19,7 +19,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>APPLY AS A TUTOR</h2>
-                <p className="text-left">
+                <p className="text-left text-white">
                   Are you passionate about teaching and making a real difference in students' lives? Do you thrive in an
                   environment that values excellence, flexibility, and professional growth? If so, we invite you to join our team
                   at Premier Home Tuition.
